@@ -1,7 +1,14 @@
 import Head from "next/head";
 
+import Access from "./components/access";
+import Apply from "./components/apply";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import Hero from "./components/hero";
+import Lead from "./components/lead";
+import Products from "./components/products";
+import Staff from "./components/staff";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -15,226 +22,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="mainimg">
-        <img src="/images/mainimg.jpg" alt="メイン画像" />
-      </div>
+      <Hero />
       <main>
-        <div className="catch">
-          <h2>
-            <span className="under">キャッチフレーズ</span>
-          </h2>
-          <p>
-            ここにキャッチコピーが入ります。
-            <br />
-            お店の宣伝やコンセプトなど。魅せる文言を入力。
-          </p>
-        </div>
-
-        <section id="1" className="gray-back">
-          <h2 className="center">
-            <span className="under">商品について</span>
-          </h2>
-          <div className="container center">
-            <div className="row">
-              <div className="col span-4">
-                <img src="/images/product.jpg" alt="ここに商品" />
-                <h3>ここに商品が入ります</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-              <div className="col span-4">
-                <img src="/images/product.jpg" alt="ここに商品" />
-                <h3>ここに商品が入ります</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-              <div className="col span-4">
-                <img src="/images/product.jpg" alt="ここに商品" />
-                <h3>ここに商品が入ります</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="2">
-          <h2 className="center">
-            <span className="under">スタッフ紹介</span>
-          </h2>
-          <div className="container center">
-            <div className="row">
-              <div className="col span-4">
-                <img src="/images/staff.jpg" alt="スタッフ" />
-                <h3>スタッフ</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-              <div className="col span-4">
-                <img src="/images/staff.jpg" alt="スタッフ" />
-                <h3>スタッフ</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-              <div className="col span-4">
-                <img src="/images/staff.jpg" alt="スタッフ" />
-                <h3>スタッフ</h3>
-                <p>ここに説明文が入ります</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="3" className="gray-back">
-          <h2 className="center">
-            <span className="under">申し込みの流れ</span>
-          </h2>
-          <div className="container">
-            <div className="row flow">
-              <div className="col span-3">
-                <img src="/images/flow.jpg" alt="申し込み" />
-              </div>
-              <div className="col span-9">
-                <p>
-                  ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
-                </p>
-              </div>
-            </div>
-            <div className="row flow">
-              <div className="col span-3">
-                <img src="/images/flow.jpg" alt="申し込み" />
-              </div>
-              <div className="col span-9">
-                <p>
-                  ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
-                </p>
-              </div>
-            </div>
-            <div className="row flow">
-              <div className="col span-3">
-                <img src="/images/flow.jpg" alt="申し込み" />
-              </div>
-              <div className="col span-9">
-                <p>
-                  ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="4">
-          <h2 className="center">
-            <span className="under">アクセス</span>
-          </h2>
-          <div className="container">
-            <div className="row">
-              <div className="col span-12">
-                {/* <!-- GoogleMap --> */}
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27814443.96425483!2d120.28897720705172!3d31.679877148840735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2z5pel5pys!5e0!3m2!1sja!2sjp!4v1555153587836!5m2!1sja!2sjp"
-                  width="100%"
-                  height="450"
-                  // frameborder="0"
-                  // style="border:0"
-                  // allowfullscreen
-                ></iframe>
-                {/* <!-- /GoogleMap --> */}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="5">
-          <h2 className="center">
-            <span className="under">お問い合わせ</span>
-          </h2>
-          <div className="container">
-            <div className="row">
-              <div className="col span-6">
-                <div className="contact-box">
-                  <p>
-                    <img src="/images/tel.png" alt="電話" />
-                  </p>
-                  <p>012-345-6789</p>
-                </div>
-              </div>
-              <div className="col span-6">
-                <div className="contact-box">
-                  <p>
-                    <img src="/images/mail.png" alt="Eメール" />
-                  </p>
-                  <p>simple@mail.com</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col span-12">
-                <form method="post" action="">
-                  <table className="table full-width">
-                    <tbody>
-                      <tr>
-                        <th>
-                          <label htmlFor="name">お名前</label>
-                        </th>
-                        <td>
-                          <input
-                            className="full-width"
-                            type="text"
-                            name="お名前"
-                            placeholder="名前を記入"
-                            id="exampNameInput"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label htmlFor="email">メールアドレス</label>
-                        </th>
-                        <td>
-                          <input
-                            className="full-width"
-                            type="email"
-                            name="Email"
-                            placeholder="メールアドレスを記入"
-                            id="exampleEmailInput"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label htmlFor="tel">お電話番号</label>
-                        </th>
-                        <td>
-                          <input
-                            className="full-width"
-                            type="tel"
-                            name="お電話番号"
-                            placeholder="お電話番号を記入"
-                            id="exampleTellInput"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label htmlFor="exampleMessage">
-                            お問い合わせ内容
-                          </label>
-                        </th>
-                        <td>
-                          <textarea
-                            className="full-width textarea"
-                            name="お問い合わせ内容"
-                            placeholder="用件をご記入ください …"
-                            id="exampleMessage"
-                          ></textarea>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p className="center">
-                    <input className="button" type="submit" value="送 信" />
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Lead />
+        <Products />
+        <Staff />
+        <Apply />
+        <Access />
+        <Contact />
       </main>
       <Footer />
     </>
